@@ -1,5 +1,5 @@
-# starlc_java
-java标准工程
+# starlc_java java标准工程
+
 # 1、加入fastjson
 # 2、封装常用文件上传下载、打包功能
 # 3、Jnotify
@@ -9,3 +9,4 @@ java标准工程
 # 7、多线程
 # 8、jxpath
 # 9、视情况将缓存加入到redis
+# 10、
