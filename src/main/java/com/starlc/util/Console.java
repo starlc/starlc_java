@@ -20,6 +20,6 @@ public class Console {
 	}
 	
 	public static void log(Object pattern){
-		log(pattern,new Object[0]);
+		log(pattern,(Object[])null);
 	}
 }
