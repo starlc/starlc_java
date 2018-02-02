@@ -3,6 +3,7 @@
  */
 package reflect;
 
+
 /**
  * @author liucheng2
  *
@@ -12,7 +13,9 @@ public abstract class AbstractPersonFactory {
 	private static IPerson person;
 	
 	public static IPerson getPerson() {
-		return ObjectUtil.createBean(person, Person.class);
+		IPerson obj = ObjectUtil.createBean(person, Person.class);
+		System.out.println(person);
+		return obj;
 	}
 	
 	 private static class ObjectUtil {
