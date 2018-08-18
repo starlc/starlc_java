@@ -26,6 +26,7 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+    dependencies { compile fileTree(dir:'templib',include:['*.jar'])}
 }
 
 // Define the main class for the application
