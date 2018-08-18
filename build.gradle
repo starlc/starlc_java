@@ -23,10 +23,11 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     //23°æ±¾ ÐèÒªjdk1.8
     compile 'com.google.guava:guava:19.0'
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
-    dependencies { compile fileTree(dir:'templib',include:['*.jar'])}
+    //dependencies { compile fileTree(dir:'templib',include:['*.jar'])}
 }
 
 // Define the main class for the application
