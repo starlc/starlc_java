@@ -5,7 +5,6 @@ package com.starlc.designmode.proxy.simple;
 
 
 /**
- * ´úÀíÈË
  * @author liucheng2
  *
  */

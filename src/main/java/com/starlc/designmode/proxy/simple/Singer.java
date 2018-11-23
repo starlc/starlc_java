@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.proxy.simple;
 
@@ -9,19 +9,19 @@ package com.starlc.designmode.proxy.simple;
  */
 public class Singer implements IAct {
 	private String name;
-	
+
 	public Singer(String name) {
 		this.name = name;
 	}
 	@Override
 	public void sing() {
-		System.out.println(name+"³ª¸è");
-		
+		System.out.println(name+"å”±æ­Œ");
+
 	}
 
 	@Override
 	public void dance() {
-		System.out.println(name+"ÌøÎè");
+		System.out.println(name+"è·³èˆž");
 	}
-	
+
 }

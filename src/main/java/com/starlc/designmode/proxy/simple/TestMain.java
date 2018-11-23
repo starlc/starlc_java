@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.proxy.simple;
 
@@ -14,7 +14,7 @@ public class TestMain {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Proxyer proxyer = new Proxyer(new Singer("ÁõÈôÓ¢"));
+		Proxyer proxyer = new Proxyer(new Singer("åˆ˜è‹¥è‹±"));
 		proxyer.sing();
 		proxyer.dance();
 	}
