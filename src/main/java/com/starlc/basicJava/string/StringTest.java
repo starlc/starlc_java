@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.basicJava.string;
 
@@ -8,14 +8,14 @@ package com.starlc.basicJava.string;
  *
  */
 public class StringTest {
-	
+
 	public static void main(String[] args) {
 		test1();
 		test2();
 		test3();
 	}
 	/**
-	 * new ·½·¨»áÔÚheap´´½¨Ò»¸ö¶ÔÏó £¬ÆäÒıÓÃÖ¸Ïò×Ö·û´®³£Á¿³Ø
+	 * new æ–¹æ³•ä¼šåœ¨heapåˆ›å»ºä¸€ä¸ªå¯¹è±¡ ï¼Œå…¶å¼•ç”¨æŒ‡å‘å­—ç¬¦ä¸²å¸¸é‡æ± 
 	 */
 	public static void test1() {
 		String t1 = "abcd";
@@ -26,33 +26,33 @@ public class StringTest {
 		System.out.println(t2==t3);
 		System.out.println(t1.equals(t2));
 	}
-	
-	public static final String A; // ³£Á¿A
-	public static final String B;    // ³£Á¿B
-	static {   
-	     A = "ab";   
-	     B = "cd";   
-	 } 
-	public static void test2(){
-		// ½«Á½¸ö³£Á¿ÓÃ+Á¬½Ó¶Ôs½øĞĞ³õÊ¼»¯   
-	     String s = A + B;   
-	     String t = "abcd";   
-	    if (s == t) {   
-	         System.out.println("sµÈÓÚt£¬ËüÃÇÊÇÍ¬Ò»¸ö¶ÔÏó");   
-	     } else {   
-	         System.out.println("s²»µÈÓÚt£¬ËüÃÇ²»ÊÇÍ¬Ò»¸ö¶ÔÏó");   
-	     }
+
+	public static final String A; // å¸¸é‡A
+	public static final String B;    // å¸¸é‡B
+	static {
+		A = "ab";
+		B = "cd";
 	}
-	
-	public static final String C = "ab"; // ³£Á¿A
-	public static final String D = "cd"; // ³£Á¿B
+	public static void test2(){
+		// å°†ä¸¤ä¸ªå¸¸é‡ç”¨+è¿æ¥å¯¹sè¿›è¡Œåˆå§‹åŒ–
+		String s = A + B;
+		String t = "abcd";
+		if (s == t) {
+			System.out.println("sç­‰äºtï¼Œå®ƒä»¬æ˜¯åŒä¸€ä¸ªå¯¹è±¡");
+		} else {
+			System.out.println("sä¸ç­‰äºtï¼Œå®ƒä»¬ä¸æ˜¯åŒä¸€ä¸ªå¯¹è±¡");
+		}
+	}
+
+	public static final String C = "ab"; // å¸¸é‡A
+	public static final String D = "cd"; // å¸¸é‡B
 	public static void test3() {
-	     String s = C + D;  // ½«Á½¸ö³£Á¿ÓÃ+Á¬½Ó¶Ôs½øĞĞ³õÊ¼»¯ 
-	     String t = "abcd";   
-	    if (s == t) {   
-	         System.out.println("sµÈÓÚt£¬ËüÃÇÊÇÍ¬Ò»¸ö¶ÔÏó");   
-	     } else {   
-	         System.out.println("s²»µÈÓÚt£¬ËüÃÇ²»ÊÇÍ¬Ò»¸ö¶ÔÏó");   
-	     }   
-	 }
+		String s = C + D;  // å°†ä¸¤ä¸ªå¸¸é‡ç”¨+è¿æ¥å¯¹sè¿›è¡Œåˆå§‹åŒ–
+		String t = "abcd";
+		if (s == t) {
+			System.out.println("sç­‰äºtï¼Œå®ƒä»¬æ˜¯åŒä¸€ä¸ªå¯¹è±¡");
+		} else {
+			System.out.println("sä¸ç­‰äºtï¼Œå®ƒä»¬ä¸æ˜¯åŒä¸€ä¸ªå¯¹è±¡");
+		}
+	}
 }
