@@ -1,47 +1,47 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.facade; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.facade;
 
 /**
- * ¹ÉÆ±1
- * 
+ * è‚¡ç¥¨1
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public class Stock1 {
-    
+
     public void sell(){
-        System.out.println("¹ÉÆ±1Âô³ö");
+        System.out.println("è‚¡ç¥¨1å–å‡º");
     }
-    
+
     public void buy(){
-        System.out.println("¹ÉÆ±1ÂòÈë");
+        System.out.println("è‚¡ç¥¨1ä¹°å…¥");
     }
 }
 
 class Stock2 {
-    
+
     public void sell(){
-        System.out.println("¹ÉÆ±2Âô³ö");
+        System.out.println("è‚¡ç¥¨2å–å‡º");
     }
-    
+
     public void buy(){
-        System.out.println("¹ÉÆ±2ÂòÈë");
+        System.out.println("è‚¡ç¥¨2ä¹°å…¥");
     }
-} 
+}
 
 class Stock3 {
-    
+
     public void sell(){
-        System.out.println("¹ÉÆ±3Âô³ö");
+        System.out.println("è‚¡ç¥¨3å–å‡º");
     }
-    
+
     public void buy(){
-        System.out.println("¹ÉÆ±3ÂòÈë");
+        System.out.println("è‚¡ç¥¨3ä¹°å…¥");
     }
 } 
  
