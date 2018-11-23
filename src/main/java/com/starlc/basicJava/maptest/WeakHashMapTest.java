@@ -1,8 +1,8 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.basicJava.maptest; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.basicJava.maptest;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -10,38 +10,38 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
- * Àà×¢ÊÍĞÅÏ¢
- * @Description:   TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
- * 
+ * ç±»æ³¨é‡Šä¿¡æ¯
+ * @Description:   TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ)
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ3ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ3æ—¥ starlc
  */
 public class WeakHashMapTest {
-    public static void main(String[] args) throws Exception { 
-        String a = new String("a"); 
-        String b = new String("b"); 
-        Map weakmap = new WeakHashMap(); 
-        Map map = new HashMap(); 
-        map.put(a, "aaa"); 
+    public static void main(String[] args) throws Exception {
+        String a = new String("a");
+        String b = new String("b");
+        Map weakmap = new WeakHashMap();
+        Map map = new HashMap();
+        map.put(a, "aaa");
         map.put(b, "bbb");
-        weakmap.put(a, "aaa"); 
+        weakmap.put(a, "aaa");
         weakmap.put(b, "bbb");
         map.remove(a);
-        a=null; 
+        a=null;
         b=null;
-        System.gc(); 
-        Iterator i = map.entrySet().iterator(); 
-        while (i.hasNext()) { 
-        Map.Entry en = (Map.Entry)i.next(); 
-        System.out.println("map:"+en.getKey()+":"+en.getValue()); 
-        } 
-        Iterator j = weakmap.entrySet().iterator(); 
-        while (j.hasNext()) { 
-        Map.Entry en = (Map.Entry)j.next(); 
-        System.out.println("weakmap:"+en.getKey()+":"+en.getValue()); 
-        } 
-        } 
+        System.gc();
+        Iterator i = map.entrySet().iterator();
+        while (i.hasNext()) {
+            Map.Entry en = (Map.Entry)i.next();
+            System.out.println("map:"+en.getKey()+":"+en.getValue());
+        }
+        Iterator j = weakmap.entrySet().iterator();
+        while (j.hasNext()) {
+            Map.Entry en = (Map.Entry)j.next();
+            System.out.println("weakmap:"+en.getKey()+":"+en.getValue());
+        }
+    }
 }
  
