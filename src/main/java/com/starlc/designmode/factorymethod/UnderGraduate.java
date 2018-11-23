@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.factorymethod;
 
@@ -9,14 +9,14 @@ package com.starlc.designmode.factorymethod;
  */
 public class UnderGraduate implements Leifeng {
 	public UnderGraduate() {
-		System.out.println("´óÑ§Éú");
+		System.out.println("å¤§å­¦ç”Ÿ");
 	}
 	/* (non-Javadoc)
 	 * @see com.starlc.designmode.factorymethod.Leifeng#sweep()
 	 */
 	@Override
 	public void sweep() {
-		System.out.println("´òÉ¨");
+		System.out.println("æ‰“æ‰«");
 
 	}
 
@@ -26,7 +26,7 @@ public class UnderGraduate implements Leifeng {
 	@Override
 	public void wash() {
 		// TODO Auto-generated method stub
-		System.out.println("Ï´Ë¢");
+		System.out.println("æ´—åˆ·");
 	}
 
 	/* (non-Javadoc)
@@ -35,7 +35,7 @@ public class UnderGraduate implements Leifeng {
 	@Override
 	public void buyRice() {
 		// TODO Auto-generated method stub
-		System.out.println("Âò´óÃ×");
+		System.out.println("ä¹°å¤§ç±³");
 	}
 
 }

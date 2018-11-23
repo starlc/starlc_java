@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.factorymethod;
 
@@ -8,16 +8,16 @@ package com.starlc.designmode.factorymethod;
  *
  */
 public class Volunteer implements Leifeng {
-	
+
 	public Volunteer() {
-		System.out.println("Ö¾Ô¸Õß");
+		System.out.println("å¿—æ„¿è€…");
 	}
 	/* (non-Javadoc)
 	 * @see com.starlc.designmode.factorymethod.Leifeng#sweep()
 	 */
 	@Override
 	public void sweep() {
-		System.out.println("´òÉ¨");
+		System.out.println("æ‰“æ‰«");
 
 	}
 
@@ -27,7 +27,7 @@ public class Volunteer implements Leifeng {
 	@Override
 	public void wash() {
 		// TODO Auto-generated method stub
-		System.out.println("Ï´Ë¢");
+		System.out.println("æ´—åˆ·");
 	}
 
 	/* (non-Javadoc)
@@ -36,7 +36,7 @@ public class Volunteer implements Leifeng {
 	@Override
 	public void buyRice() {
 		// TODO Auto-generated method stub
-		System.out.println("Âò´óÃ×");
+		System.out.println("ä¹°å¤§ç±³");
 	}
 
 }
