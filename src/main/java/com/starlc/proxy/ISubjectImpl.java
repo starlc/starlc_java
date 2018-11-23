@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.proxy;
 
@@ -15,7 +15,7 @@ public class ISubjectImpl implements ISubject {
 	@Override
 	public void request() {
 		// TODO Auto-generated method stub
-		System.out.println("I¡®m running ");
+		System.out.println("Iâ€˜m running ");
 	}
 
 }
