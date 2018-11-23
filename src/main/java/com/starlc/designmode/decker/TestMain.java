@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.decker;
 
@@ -13,14 +13,14 @@ public class TestMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		IComponent component = new Person("ÕÅÈı");
+		IComponent component = new Person("å¼ ä¸‰");
 		Tshit shit = new Tshit(component);
 		Suit suit = new Suit(shit);
-		
+
 		suit.cross();
-//		ÕÅÈı×¼±¸´©ÒÂ
-//		´©ÉÏTĞô
-//		´©ÉÏÎ÷×°
+//		å¼ ä¸‰å‡†å¤‡ç©¿è¡£
+//		ç©¿ä¸ŠTæ¤
+//		ç©¿ä¸Šè¥¿è£…
 	}
 
 }

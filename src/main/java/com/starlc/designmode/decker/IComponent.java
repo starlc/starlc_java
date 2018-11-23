@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.decker;
 
@@ -8,9 +8,9 @@ package com.starlc.designmode.decker;
  *
  */
 public interface IComponent {
-	
+
 	/**
-	 * ´©
+	 * ç©¿
 	 */
 	public void cross();
 }

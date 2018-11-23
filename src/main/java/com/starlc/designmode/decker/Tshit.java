@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.decker;
 
@@ -12,11 +12,11 @@ public class Tshit extends Decker {
 	public Tshit(IComponent component) {
 		super(component);
 	}
-	
+
 	@Override
 	public void cross() {
 		super.cross();
-		System.out.println("´©ÉÏTĞô");
+		System.out.println("ç©¿ä¸ŠTæ¤");
 	}
 
 }

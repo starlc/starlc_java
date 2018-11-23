@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.decker;
 
@@ -8,15 +8,15 @@ package com.starlc.designmode.decker;
  *
  */
 public class Person implements IComponent {
-	//Ãû³Æ
+	//åç§°
 	private String name;
-	
+
 	public Person() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	/**
-	 * ×Ô¶¨Òå¹¹Ôì·½·¨
+	 * è‡ªå®šä¹‰æ„é€ æ–¹æ³•
 	 * @param name
 	 */
 	public Person(String name){
@@ -27,7 +27,7 @@ public class Person implements IComponent {
 	 */
 	@Override
 	public void cross() {
-		System.out.println(name+"×¼±¸´©ÒÂ");
+		System.out.println(name+"å‡†å¤‡ç©¿è¡£");
 	}
-	
+
 }
