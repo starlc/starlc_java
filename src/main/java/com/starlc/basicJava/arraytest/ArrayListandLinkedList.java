@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * Àà×¢ÊÍĞÅÏ¢
- * 
- * @Description: TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´)
- * 
+ * ç±»æ³¨é‡Šä¿¡æ¯
+ *
+ * @Description: TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ)
+ *
  * @author starlc
  * @since jdk1.7
  * @version V-0.1
- * @Date 2018Äê4ÔÂ3ÈÕ starlc
+ * @Date 2018å¹´4æœˆ3æ—¥ starlc
  */
 public class ArrayListandLinkedList {
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class ArrayListandLinkedList {
             list.add(0, obj2);
         }
         end = System.currentTimeMillis();
-        System.out.println("ArrayList²åÈë1000¸öÔªËØºÄÊ±"+(end - start));
+        System.out.println("ArrayListæ’å…¥1000ä¸ªå…ƒç´ è€—æ—¶"+(end - start));
 
         start = System.currentTimeMillis();
         Object obj3 = new Object();
@@ -51,7 +51,7 @@ public class ArrayListandLinkedList {
             list1.add(obj1);
         }
         end = System.currentTimeMillis();
-        System.out.println("LinkedList²åÈë1000¸öÔªËØºÄÊ±"+(end - start));
+        System.out.println("LinkedListæ’å…¥1000ä¸ªå…ƒç´ è€—æ—¶"+(end - start));
 
         start = System.currentTimeMillis();
         list.remove(0);

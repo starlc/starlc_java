@@ -1,17 +1,17 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.basicJava.arraytest; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.basicJava.arraytest;
 
 /**
- * Àà×¢ÊÍĞÅÏ¢
- * @Description:   TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
- * 
+ * ç±»æ³¨é‡Šä¿¡æ¯
+ * @Description:   TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ)
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ2ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ2æ—¥ starlc
  */
 public class Father {
 
