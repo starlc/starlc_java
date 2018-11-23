@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.jvm.oom;
 
@@ -23,11 +23,11 @@ public class TestMethodOOM {
 		// TODO Auto-generated method stub
 		test();
 	}
-	
+
 	/**
-	 * -Xss256k ÊÇÕ»´óĞ¡·ÖÅä
+	 * -Xss256k æ˜¯æ ˆå¤§å°åˆ†é…
 	 * -verbose:gc -Xms10M -Xmx10M  -XX:PermSize=3M -XX:MaxPermSize=3M -XX:+PrintGCDetails -XX:-UseGCOverheadLimit
-	 * Ôö´óPermÇø  ÔÊĞíclass»ØÊÕ
+	 * å¢å¤§PermåŒº  å…è®¸classå›æ”¶
 	 */
 	static void test(){
 		ArrayList<ISubject> lst = new ArrayList<ISubject>();

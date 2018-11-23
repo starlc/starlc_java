@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.jvm.oom;
 
@@ -16,11 +16,11 @@ public class TestStackOOM implements Runnable{
 		// TODO Auto-generated method stub
 		test();
 	}
-	
+
 	/**
 	 * -Xmx1g -Xss10m
-	 * ¼õÉÙ¶Ñ¿Õ¼ä
-	 * ¼õÉÙÏß³ÌÕ»´óĞ¡
+	 * å‡å°‘å †ç©ºé—´
+	 * å‡å°‘çº¿ç¨‹æ ˆå¤§å°
 	 */
 	static void test(){
 		for (int i = 0; i < 10000; i++) {
@@ -36,6 +36,6 @@ public class TestStackOOM implements Runnable{
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 	}
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.jvm.oom;
 
@@ -13,8 +13,8 @@ public class TestDirectOOM {
 
 	/**
 	 * @param args
-	 * ¼õÉÙ¶Ñ¿Õ¼ä
-	 * ÓĞÒâ´¥·¢GC
+	 * å‡å°‘å †ç©ºé—´
+	 * æœ‰æ„è§¦å‘GC
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -24,5 +24,5 @@ public class TestDirectOOM {
 			System.gc();
 		}
 	}
-	
+
 }

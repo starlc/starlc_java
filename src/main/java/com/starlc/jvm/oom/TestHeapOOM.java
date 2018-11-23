@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.jvm.oom;
 
@@ -19,9 +19,9 @@ public class TestHeapOOM {
 		// TODO Auto-generated method stub
 		testString();
 	}
-	
+
 	/**
-	 * ²âÊÔÕ»Òç³ö
+	 * æµ‹è¯•æ ˆæº¢å‡º
 	 */
 	static void test(){
 		ArrayList<byte[]> list = new ArrayList<byte[]>();
