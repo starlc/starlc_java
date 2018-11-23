@@ -1,13 +1,11 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.strategy;
 
-import com.starlc.designmode.simplefactory.Operation;
-import com.starlc.designmode.simplefactory.OperationFactory;
 
 /**
- * ²ßÂÔÄ£Ê½ ²âÊÔÀà
+ * ç­–ç•¥æ¨¡å¼ æµ‹è¯•ç±»
  * @author liucheng2
  *
  */
@@ -17,20 +15,20 @@ public class CashController {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Commodity commodity = new Commodity("°×²Ë", 18.00);
+		Commodity commodity = new Commodity("ç™½èœ", 18.00);
 		int count = 10;
-		test(commodity, count, "°ËÕÛ");
+		test(commodity, count, "å…«æŠ˜");
 	}
-	
-	
+
+
 	/**
-	 * ¿Í»§¶ËÊÕ·Ñ´úÂë
+	 * å®¢æˆ·ç«¯æ”¶è´¹ä»£ç 
 	 * @param commodity
 	 * @param type
 	 */
 	public static void test(Commodity commodity,int nums,String type){
 		CashContext cashContext = new CashContext(type);
 		double money = cashContext.getResultMoney(commodity.getPrice()*nums);
-		System.out.println(commodity.getName()+"»¨·Ñ£º"+money);
+		System.out.println(commodity.getName()+"èŠ±è´¹ï¼š"+money);
 	}
 }

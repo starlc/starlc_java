@@ -1,34 +1,34 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.strategy;
 
 /**
- * ÊÕ·Ñ ²ßÂÔÄ£Ê½ºÍ¼òµ¥¹¤³§Ä£Ê½½áºÏ
+ * æ”¶è´¹ ç­–ç•¥æ¨¡å¼å’Œç®€å•å·¥å‚æ¨¡å¼ç»“åˆ
  * @author liucheng2
  *
  */
 public class CashContext {
 	private CashSuper cashSuper;
-	
+
 	/**
-	 * ¼òµ¥¹¤³§Ä£Ê½
-	 * ×¢Òâ Õâ¸ö²ÎÊıµÄÀàĞÍ
+	 * ç®€å•å·¥å‚æ¨¡å¼
+	 * æ³¨æ„ è¿™ä¸ªå‚æ•°çš„ç±»å‹
 	 * @param type
 	 */
 	public CashContext(String type) {
 		switch (type) {
-		case "°ËÕÛ":
-			cashSuper = new DiscountCash();
-			break;
-		case "Âú¼õ":
-			cashSuper = new ReduceCash();
-			break;
-		default:
-			cashSuper = new OriginalPriceCash();
+			case "å…«æŠ˜":
+				cashSuper = new DiscountCash();
+				break;
+			case "æ»¡å‡":
+				cashSuper = new ReduceCash();
+				break;
+			default:
+				cashSuper = new OriginalPriceCash();
 		}
 	}
-	
+
 	public double getResultMoney(double money){
 		return cashSuper.acceptCash(money);
 	}
@@ -46,6 +46,6 @@ public class CashContext {
 	public void setCashSuper(CashSuper cashSuper) {
 		this.cashSuper = cashSuper;
 	}
-	
-	
+
+
 }

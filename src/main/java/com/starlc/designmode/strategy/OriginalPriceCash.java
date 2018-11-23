@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.strategy;
 
 /**
- * Ô­¼Û
+ * åŽŸä»·
  * @author liucheng2
  *
  */

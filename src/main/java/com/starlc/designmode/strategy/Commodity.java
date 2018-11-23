@@ -1,21 +1,21 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.strategy;
 
 /**
- * …Ã∆∑
+ * ÂïÜÂìÅ
  * @author liucheng2
  *
  */
 public class Commodity {
 	private String name;
 	private double price;
-	
+
 	public Commodity() {
-		
+
 	}
-	
+
 	/**
 	 * @param name
 	 * @param price
@@ -51,6 +51,6 @@ public class Commodity {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
+
+
 }
