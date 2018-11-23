@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.simplefactory;
 
 /**
- * ³Ë·¨ÔËËã
+ * ä¹˜æ³•è¿ç®—
  * @author liucheng2
  *
  */

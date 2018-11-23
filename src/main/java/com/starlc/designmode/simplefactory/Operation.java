@@ -1,16 +1,16 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.simplefactory;
 
 /**
- * 运算方式接口
+ * 杩愮畻鏂瑰紡鎺ュ彛
  * @author liucheng2
  *
  */
 public interface Operation {
 	/**
-	 * 运算接口
+	 * 杩愮畻鎺ュ彛
 	 * @param dNumber1
 	 * @param dNumber2
 	 * @return
