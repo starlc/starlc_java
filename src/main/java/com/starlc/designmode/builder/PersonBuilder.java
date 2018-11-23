@@ -1,29 +1,29 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder;
 
 /**
- * ´´½¨¸´ÔÓ¶ÔÏó
- * ÏÖÔÚ¼ÙÉèÒ»¸öÈËµÄÍêÕûĞÅÏ¢ÓÉÕâ¼¸²¿·Ö×é³É£¬
+ * åˆ›å»ºå¤æ‚å¯¹è±¡
+ * ç°åœ¨å‡è®¾ä¸€ä¸ªäººçš„å®Œæ•´ä¿¡æ¯ç”±è¿™å‡ éƒ¨åˆ†ç»„æˆï¼Œ
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public abstract class PersonBuilder {
-    
-    
+
+
     public abstract void buildName();
     public abstract void buildPhone();
     public abstract void buildAge();
     public abstract void buildAddress();
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 }
  

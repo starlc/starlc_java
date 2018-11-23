@@ -1,16 +1,16 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder;
 
 /**
- * ¾ßÌå´´½¨Õß2
- * 
+ * å…·ä½“åˆ›å»ºè€…2
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public class ConcreatePersonBuilder2 extends PersonBuilder {
 
@@ -19,7 +19,7 @@ public class ConcreatePersonBuilder2 extends PersonBuilder {
      */
     @Override
     public void buildName() {
-        System.out.println("´´½¨ÓÃ»§Ãû³ÆB");
+        System.out.println("åˆ›å»ºç”¨æˆ·åç§°B");
     }
 
     /** (non-Javadoc)
@@ -27,7 +27,7 @@ public class ConcreatePersonBuilder2 extends PersonBuilder {
      */
     @Override
     public void buildPhone() {
-        System.out.println("´´½¨ÓÃ»§ºÅÂëB");
+        System.out.println("åˆ›å»ºç”¨æˆ·å·ç B");
     }
 
     /** (non-Javadoc)
@@ -35,8 +35,8 @@ public class ConcreatePersonBuilder2 extends PersonBuilder {
      */
     @Override
     public void buildAge() {
-        System.out.println("´´½¨ÓÃ»§ÄêÁäB");
-        
+        System.out.println("åˆ›å»ºç”¨æˆ·å¹´é¾„B");
+
     }
 
     /** (non-Javadoc)
@@ -44,11 +44,11 @@ public class ConcreatePersonBuilder2 extends PersonBuilder {
      */
     @Override
     public void buildAddress() {
-        System.out.println("´´½¨ÓÃ»§µØÖ·B");
-        
+        System.out.println("åˆ›å»ºç”¨æˆ·åœ°å€B");
+
     }
 
-    
+
 
 }
  
