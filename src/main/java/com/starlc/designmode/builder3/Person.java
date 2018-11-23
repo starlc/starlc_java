@@ -1,20 +1,20 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder3; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder3;
 
 /**
- * Àà×¢ÊÍĞÅÏ¢
- * @Description:   TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
- * 
+ * ç±»æ³¨é‡Šä¿¡æ¯
+ * @Description:   TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ)
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ28ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ28æ—¥ starlc
  */
 public class Person {
-    
+
     private String firstName;
     private String lastName;
     private String phone;
@@ -80,7 +80,7 @@ public class Person {
     protected void setAge(int age) {
         this.age = age;
     }
-    
-    
+
+
 }
  

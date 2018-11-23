@@ -1,26 +1,26 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder3; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder3;
 
 /**
- * ¾ßÌå´´½¨Õß
- * 
+ * å…·ä½“åˆ›å»ºè€…
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public class ConcreatePersonBuilder extends PersonBuilder {
-    
+
     private Person person = new Person();
     /** (non-Javadoc)
      * @see com.starlc.designmode.builder.PersonBuilder#buildName()
      */
     @Override
     public void buildName() {
-        System.out.println("´´½¨ÓÃ»§Ãû³ÆA");
+        System.out.println("åˆ›å»ºç”¨æˆ·åç§°A");
         person.setFirstName("zhang");
         person.setLastName("san");
     }
@@ -30,7 +30,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
      */
     @Override
     public void buildPhone() {
-        System.out.println("´´½¨ÓÃ»§ºÅÂëA");
+        System.out.println("åˆ›å»ºç”¨æˆ·å·ç A");
         person.setPhone("15875269287");
     }
 
@@ -39,9 +39,9 @@ public class ConcreatePersonBuilder extends PersonBuilder {
      */
     @Override
     public void buildAge() {
-        System.out.println("´´½¨ÓÃ»§ÄêÁäA");
+        System.out.println("åˆ›å»ºç”¨æˆ·å¹´é¾„A");
         person.setAge(29);
-        
+
     }
 
     /** (non-Javadoc)
@@ -49,9 +49,9 @@ public class ConcreatePersonBuilder extends PersonBuilder {
      */
     @Override
     public void buildAddress() {
-        System.out.println("´´½¨ÓÃ»§µØÖ·A");
-        person.setAddress("xxxÂ·xxxºÅ");
-        
+        System.out.println("åˆ›å»ºç”¨æˆ·åœ°å€A");
+        person.setAddress("xxxè·¯xxxå·");
+
     }
 
     /** (non-Javadoc)
@@ -62,7 +62,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
         return person;
     }
 
-    
+
 
 }
  

@@ -1,19 +1,19 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder2; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder2;
 
 /**
- * ÓªÑø³É·Ö¹¹³É
- * 
+ * è¥å…»æˆåˆ†æ„æˆ
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ28ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ28æ—¥ starlc
  */
 public class TestMain {
-    
+
     public static void main(String[] args) {
         NutritionFacts facts = new NutritionFacts.Builder(10,5).calories(100).sodium(35).carbohydrate(20).build();
         facts.toString();

@@ -1,31 +1,31 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder3; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder3;
 
 /**
- * Ö¸µ¼Õß
- * 
+ * æŒ‡å¯¼è€…
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public class PersonDirector {
-    
+
     private PersonBuilder pb;
     public  PersonDirector(PersonBuilder pb) {
         this.pb = pb;
     }
-    
+
     public void createPerson(){
         pb.buildName();
         pb.buildPhone();
         pb.buildAge();
         pb.buildAddress();
     };
-    
+
     public Person createPersonInstanse(){
         pb.buildName();
         pb.buildPhone();
@@ -33,6 +33,6 @@ public class PersonDirector {
         pb.buildAddress();
         return pb.getBuilder();
     };
-    
+
 }
  

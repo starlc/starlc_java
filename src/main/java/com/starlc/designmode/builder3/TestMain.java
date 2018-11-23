@@ -1,25 +1,25 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.builder3; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.builder3;
 
 /**
- * Àà×¢ÊÍĞÅÏ¢
- * @Description:   TODO(ÓÃÒ»¾ä»°ÃèÊö¸ÃÎÄ¼ş×öÊ²Ã´) 
- * 
+ * ç±»æ³¨é‡Šä¿¡æ¯
+ * @Description:   TODO(ç”¨ä¸€å¥è¯æè¿°è¯¥æ–‡ä»¶åšä»€ä¹ˆ)
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ28ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ28æ—¥ starlc
  */
 public class TestMain {
 
-    /** 
-     * @Description:  TODO(ÕâÀïÓÃÒ»¾ä»°ÃèÊöÕâ¸ö·½·¨µÄ×÷ÓÃ) 
+    /**
+     * @Description:  TODO(è¿™é‡Œç”¨ä¸€å¥è¯æè¿°è¿™ä¸ªæ–¹æ³•çš„ä½œç”¨)
      * @param:        @param args    
-     * @return:       void    
-     * @throws 
+     * @return:       void
+     * @throws
      */
     public static void main(String[] args) {
         PersonBuilder pbBuilder = new ConcreatePersonBuilder();
