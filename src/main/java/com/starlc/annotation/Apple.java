@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.annotation;
 
@@ -11,41 +11,41 @@ import com.starlc.annotation.FruitColor.Color;
  */
 
 /**
- * ×¢½âÊ¹ÓÃ
+ * æ³¨è§£ä½¿ç”¨
  */
 public class Apple {
-    
+
     @FruitName("Apple")
     private String appleName;
-    
+
     @FruitColor(fruitColor=Color.RED)
     private String appleColor;
-    
-    @FruitProvider(id=1,name="ÉÂÎ÷ºì¸»Ê¿¼¯ÍÅ",address="ÉÂÎ÷Ê¡Î÷°²ÊĞÑÓ°²Â·89ºÅºì¸»Ê¿´óÏÃ")
+
+    @FruitProvider(id=1,name="é™•è¥¿çº¢å¯Œå£«é›†å›¢",address="é™•è¥¿çœè¥¿å®‰å¸‚å»¶å®‰è·¯89å·çº¢å¯Œå£«å¤§å¦")
     private String appleProvider;
-    
+
     public void setAppleColor(String appleColor) {
         this.appleColor = appleColor;
     }
     public String getAppleColor() {
         return appleColor;
     }
-    
+
     public void setAppleName(String appleName) {
         this.appleName = appleName;
     }
     public String getAppleName() {
         return appleName;
     }
-    
+
     public void setAppleProvider(String appleProvider) {
         this.appleProvider = appleProvider;
     }
     public String getAppleProvider() {
         return appleProvider;
     }
-    
+
     public void displayName(){
-        System.out.println("Ë®¹ûµÄÃû×ÖÊÇ£ºÆ»¹û");
+        System.out.println("æ°´æœçš„åå­—æ˜¯ï¼šè‹¹æœ");
     }
 }

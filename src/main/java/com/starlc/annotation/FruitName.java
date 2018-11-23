@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.starlc.annotation;
 
 import java.lang.annotation.Documented;
@@ -17,6 +14,6 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 @Documented
 public @interface FruitName {
-	
+
 	String value() default "";
 }

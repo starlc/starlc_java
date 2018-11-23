@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.annotation;
 import java.lang.annotation.Documented;
@@ -12,24 +12,24 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  *
  */
 /**
- * Ë®¹û¹©Ó¦Õß×¢½â
+ * æ°´æœä¾›åº”è€…æ³¨è§£
  */
 @Target(FIELD)
 @Retention(RUNTIME)
 @Documented
 public @interface FruitProvider {
     /**
-     * ¹©Ó¦ÉÌ±àºÅ
+     * ä¾›åº”å•†ç¼–å·
      */
     public int id() default -1;
-    
+
     /**
-     * ¹©Ó¦ÉÌÃû³Æ
+     * ä¾›åº”å•†åç§°
      */
     public String name() default "";
-    
+
     /**
-     * ¹©Ó¦ÉÌµØÖ·
+     * ä¾›åº”å•†åœ°å€
      */
     public String address() default "";
 }

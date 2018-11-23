@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.annotation;
 
@@ -10,19 +10,19 @@ import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Ë®¹ûÑÕÉ«×¢½â
+ * æ°´æžœé¢œè‰²æ³¨è§£
  */
 @Target(FIELD)
 @Retention(RUNTIME)
 @Documented
 public @interface FruitColor {
     /**
-     * ÑÕÉ«Ã¶¾Ù
+     * é¢œè‰²æžšä¸¾
      */
     public enum Color{ BLUE,RED,GREEN};
-    
+
     /**
-     * ÑÕÉ«ÊôÐÔ
+     * é¢œè‰²å±žæ€§
      */
     Color fruitColor() default Color.GREEN;
 
