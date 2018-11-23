@@ -41,7 +41,7 @@ public class RedisClient {
         config.setMaxWaitMillis(1000l); 
         config.setTestOnBorrow(false); 
         
-        jedisPool = new JedisPool(config,"192.168.40.129",6379);
+        jedisPool = new JedisPool(config,"192.168.0.110",6379);
     }
     
     /** 
@@ -57,7 +57,7 @@ public class RedisClient {
         config.setTestOnBorrow(false); 
         // slave¡¥Ω” 
         List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>(); 
-        shards.add(new JedisShardInfo("192.168.40.129", 6379, "master")); 
+        shards.add(new JedisShardInfo("192.168.0.110", 6379, "master")); 
 
         // ππ‘Ï≥ÿ 
         shardedJedisPool = new ShardedJedisPool(config, shards); 

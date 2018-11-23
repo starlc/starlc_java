@@ -9,7 +9,7 @@ package com.starlc.common;
  *
  * @author starlc
  * @since jdk1.7
- * @version 2017å¹´11æœˆ30æ—¥ starlc
+ * @version 2017Äê11ÔÂ30ÈÕ starlc
  */
 public class App {
     

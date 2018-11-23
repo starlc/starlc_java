@@ -32,11 +32,13 @@ public class TestLock {
             User u2 = new User("B", myCount, 6000, lock); 
             User u3 = new User("C", myCount, -8000, lock); 
             User u4 = new User("D", myCount, 800, lock); 
+            User u5 = new User("E", myCount, -8000, lock); 
             //在线程池中执行各个用户的操作 
             pool.execute(u1); 
             pool.execute(u2); 
             pool.execute(u3); 
             pool.execute(u4); 
+            pool.execute(u5); 
             //关闭线程池 
             pool.shutdown(); 
     } 
