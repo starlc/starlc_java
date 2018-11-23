@@ -1,15 +1,15 @@
 /**
- * 
+ *
  */
 package com.starlc.calculator;
 
 /**
- * ¼ÆËãÆ÷ÊÓÍ¼
+ * è®¡ç®—å™¨è§†å›¾
  * @author liucheng2
  *
  */
 public class CalView {
-	
+
 	public static void showView(String result){
 		System.out.println(result);
 	}

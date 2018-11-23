@@ -1,13 +1,13 @@
 /**
- * 
+ *
  */
 package com.starlc.calculator;
 
 /**
- * ½»»¥Àà
+ * äº¤äº’ç±»
  * @author liucheng2
  *
  */
 public class Interactive {
-	
+
 }

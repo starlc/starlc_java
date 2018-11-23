@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 package com.starlc.calculator;
 
 /**
- * ¼ÆËãÖÐÐÄ
+ * è®¡ç®—ä¸­å¿ƒ
  * @author liucheng2
  *
  */
@@ -24,7 +24,7 @@ public class CalController {
 			case "/":
 				result = strNum1/strNum2;
 				break;
-	
+
 			default:
 				result = 0;
 				break;
