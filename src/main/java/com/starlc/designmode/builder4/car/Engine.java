@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4.car;
 
@@ -8,9 +8,9 @@ package com.starlc.designmode.builder4.car;
  *
  */
 public class Engine {
-    private final String pl;  //ÅÅÁ¿
-    private final String maxOutputPower; //×î´óÊä³ö¹¦ÂÊ
-    private final int rpm;  //×ªËÙ
+    private final String pl;  //æ’é‡
+    private final String maxOutputPower; //æœ€å¤§è¾“å‡ºåŠŸç‡
+    private final int rpm;  //è½¬é€Ÿ
 
     Engine(String pl, String maxOutputPower, int rpm) {
         this.pl = pl;
@@ -24,9 +24,9 @@ public class Engine {
     }
 
     public static class Builder{
-        private String pl;  //ÅÅÁ¿
-        private String maxOutputPower; //×î´óÊä³ö¹¦ÂÊ
-        private int rpm;  //×ªËÙ
+        private String pl;  //æ’é‡
+        private String maxOutputPower; //æœ€å¤§è¾“å‡ºåŠŸç‡
+        private int rpm;  //è½¬é€Ÿ
 
         public Builder pl(String pl){
             this.pl = pl;

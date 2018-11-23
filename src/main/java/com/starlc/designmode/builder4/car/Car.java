@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4.car;
 
@@ -8,11 +8,11 @@ package com.starlc.designmode.builder4.car;
  *
  */
 public class Car {
-    private final String manufacturer;    //制造商
-    private final String brand;   //品牌
-    private final String model;   //型号
-    private final String producingArea;   //产地
-    private final String producingDate;   //生产时间
+    private final String manufacturer;    //鍒堕�犲晢
+    private final String brand;   //鍝佺墝
+    private final String model;   //鍨嬪彿
+    private final String producingArea;   //浜у湴
+    private final String producingDate;   //鐢熶骇鏃堕棿
     private final Engine engine;
     private final Wheel wheel;
     private final Light light;
@@ -30,11 +30,11 @@ public class Car {
     }
 
     public static class Builder{
-        private String manufacturer;    //制造商
-        private String brand;   //品牌
-        private String model;   //型号
-        private String producingArea;   //产地
-        private String producingDate;   //生产时间
+        private String manufacturer;    //鍒堕�犲晢
+        private String brand;   //鍝佺墝
+        private String model;   //鍨嬪彿
+        private String producingArea;   //浜у湴
+        private String producingDate;   //鐢熶骇鏃堕棿
         private Engine engine;
         private Wheel wheel;
         private Light light;
@@ -74,16 +74,16 @@ public class Car {
         }
     }
 
-	/* (non-Javadoc)
+    /* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	@Override
-	public String toString() {
-		return "Car [manufacturer=" + manufacturer + ", brand=" + brand
-				+ ", model=" + model + ", producingArea=" + producingArea
-				+ ", producingDate=" + producingDate + ", engine=" + engine
-				+ ", wheel=" + wheel + ", light=" + light + "]";
-	}
-    
-    
+    @Override
+    public String toString() {
+        return "Car [manufacturer=" + manufacturer + ", brand=" + brand
+                + ", model=" + model + ", producingArea=" + producingArea
+                + ", producingDate=" + producingDate + ", engine=" + engine
+                + ", wheel=" + wheel + ", light=" + light + "]";
+    }
+
+
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4;
 
@@ -14,16 +14,16 @@ public class TestMainPerson {
 	 */
 	public static void main(String[] args) {
 		Person person = new PersonBuilder()
-        .firstName("ricky")
-        .lastName("fung")
-        .age(27)
-        .street("½¨¹úÂ·")
-        .district("³¯Ñô")
-        .city("±±¾©ÊĞ")
-        .province("±±¾©")
-        .isFemale(false)
-        .isEmployed(true)
-        .create();
+				.firstName("ricky")
+				.lastName("fung")
+				.age(27)
+				.street("å»ºå›½è·¯")
+				.district("æœé˜³")
+				.city("åŒ—äº¬å¸‚")
+				.province("åŒ—äº¬")
+				.isFemale(false)
+				.isEmployed(true)
+				.create();
 
 		System.out.println(person);
 	}

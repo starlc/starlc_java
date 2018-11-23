@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4;
 
@@ -81,7 +81,7 @@ public class SIAMessage {
                 throw new IllegalArgumentException("message can not be empty!");
             }
 
-            if(builder.type==null || builder.type.length()<1){  //ÉèÖÃÄ¬ÈÏmime-type
+            if(builder.type==null || builder.type.length()<1){  //è®¾ç½®é»˜è®¤mime-type
                 builder.type = "application/json";
             }
 

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4.car;
 
@@ -9,24 +9,24 @@ package com.starlc.designmode.builder4.car;
  */
 public class TestCar {
 	public static void main(String[] args) {
-		Car car = new Car.Builder("Audi", "°ÂµÏ", "Q5")
-        .producingArea("ÖÐ¹ú´óÂ½")
-        .producingDate("2016-07-01 00:00:00")
-        .engine(Engine.custom()
-                .pl("2L")
-                .maxOutputPower("110kW")
-                .rpm(5400)
-                .build())
-        .wheel(Wheel.custom()
-                .brand("AA")
-                .producingDate("2016-03-01 00:00:00")
-                .build())
-        .light(Light.custom()
-                .brand("5A")
-                .structure("¸ôÈÈ²£Á§")
-                .producingDate("2016-02-01 00:00:00")
-                .build())
-        .build();
+		Car car = new Car.Builder("Audi", "å¥¥è¿ª", "Q5")
+				.producingArea("ä¸­å›½å¤§é™†")
+				.producingDate("2016-07-01 00:00:00")
+				.engine(Engine.custom()
+						.pl("2L")
+						.maxOutputPower("110kW")
+						.rpm(5400)
+						.build())
+				.wheel(Wheel.custom()
+						.brand("AA")
+						.producingDate("2016-03-01 00:00:00")
+						.build())
+				.light(Light.custom()
+						.brand("5A")
+						.structure("éš”çƒ­çŽ»ç’ƒ")
+						.producingDate("2016-02-01 00:00:00")
+						.build())
+				.build();
 
 		System.out.println(car);
 	}

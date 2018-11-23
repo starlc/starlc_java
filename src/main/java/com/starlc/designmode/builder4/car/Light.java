@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.designmode.builder4.car;
 
@@ -9,7 +9,7 @@ package com.starlc.designmode.builder4.car;
  */
 public class Light {
     private String brand;
-    private String structure;   //结构
+    private String structure;   //缁撴瀯
     private String producingDate;
 
     Light(String brand, String structure, String producingDate) {
@@ -25,7 +25,7 @@ public class Light {
 
     public static class Builder{
         private String brand;
-        private String structure;   //结构
+        private String structure;   //缁撴瀯
         private String producingDate;
 
         public Builder brand(String brand){
