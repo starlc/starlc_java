@@ -1,127 +1,127 @@
 /**
- * 
+ *
  */
 package com.starlc.basicJava;
 
-public class ThreadTest { 
-    public static void main(String[] args) { 
-            Godown godown = new Godown(30); 
-            Consumer c1 = new Consumer(50, godown); 
-            Consumer c2 = new Consumer(20, godown); 
-            Consumer c3 = new Consumer(30, godown); 
-            Producer p1 = new Producer(10, godown); 
-            Producer p2 = new Producer(10, godown); 
-            Producer p3 = new Producer(10, godown); 
-            Producer p4 = new Producer(10, godown); 
-            Producer p5 = new Producer(10, godown); 
-            Producer p6 = new Producer(10, godown); 
-            Producer p7 = new Producer(80, godown); 
+public class ThreadTest {
+    public static void main(String[] args) {
+        Godown godown = new Godown(30);
+        Consumer c1 = new Consumer(50, godown);
+        Consumer c2 = new Consumer(20, godown);
+        Consumer c3 = new Consumer(30, godown);
+        Producer p1 = new Producer(10, godown);
+        Producer p2 = new Producer(10, godown);
+        Producer p3 = new Producer(10, godown);
+        Producer p4 = new Producer(10, godown);
+        Producer p5 = new Producer(10, godown);
+        Producer p6 = new Producer(10, godown);
+        Producer p7 = new Producer(80, godown);
 
-            c1.start(); 
-            c2.start(); 
-            c3.start(); 
-            p1.start(); 
-            p2.start(); 
-            p3.start(); 
-            p4.start(); 
-            p5.start(); 
-            p6.start(); 
-            p7.start(); 
-    } 
-} 
+        c1.start();
+        c2.start();
+        c3.start();
+        p1.start();
+        p2.start();
+        p3.start();
+        p4.start();
+        p5.start();
+        p6.start();
+        p7.start();
+    }
+}
 
-/** 
-* ²Ö¿â 
-*/ 
-class Godown { 
-    public static final int max_size = 100; //×î´ó¿â´æÁ¿ 
-    public int curnum;     //µ±Ç°¿â´æÁ¿ 
+/**
+ * ä»“åº“
+ */
+class Godown {
+    public static final int max_size = 100; //æœ€å¤§åº“å­˜é‡
+    public int curnum;     //å½“å‰åº“å­˜é‡
 
-    Godown() { 
-    } 
+    Godown() {
+    }
 
-    Godown(int curnum) { 
-            this.curnum = curnum; 
-    } 
+    Godown(int curnum) {
+        this.curnum = curnum;
+    }
 
-    /** 
-     * Éú²úÖ¸¶¨ÊıÁ¿µÄ²úÆ· 
-     * 
-     * @param neednum 
-     */ 
-    public synchronized void produce(int neednum) { 
-            //²âÊÔÊÇ·ñĞèÒªÉú²ú 
-            while (neednum + curnum > max_size) { 
-                    System.out.println("ÒªÉú²úµÄ²úÆ·ÊıÁ¿" + neednum + "³¬¹ıÊ£Óà¿â´æÁ¿" + (max_size - curnum) + "£¬ÔİÊ±²»ÄÜÖ´ĞĞÉú²úÈÎÎñ!"); 
-                    try { 
-                            //µ±Ç°µÄÉú²úÏß³ÌµÈ´ı 
-                            wait(); 
-                    } catch (InterruptedException e) { 
-                            e.printStackTrace(); 
-                    } 
-            } 
-            //Âú×ãÉú²úÌõ¼ş£¬Ôò½øĞĞÉú²ú£¬ÕâÀï¼òµ¥µÄ¸ü¸Äµ±Ç°¿â´æÁ¿ 
-            curnum += neednum; 
-            System.out.println("ÒÑ¾­Éú²úÁË" + neednum + "¸ö²úÆ·£¬ÏÖ²Ö´¢Á¿Îª" + curnum); 
-            //»½ĞÑÔÚ´Ë¶ÔÏó¼àÊÓÆ÷ÉÏµÈ´ıµÄËùÓĞÏß³Ì 
-            notifyAll(); 
-    } 
+    /**
+     * ç”Ÿäº§æŒ‡å®šæ•°é‡çš„äº§å“
+     *
+     * @param neednum
+     */
+    public synchronized void produce(int neednum) {
+        //æµ‹è¯•æ˜¯å¦éœ€è¦ç”Ÿäº§
+        while (neednum + curnum > max_size) {
+            System.out.println("è¦ç”Ÿäº§çš„äº§å“æ•°é‡" + neednum + "è¶…è¿‡å‰©ä½™åº“å­˜é‡" + (max_size - curnum) + "ï¼Œæš‚æ—¶ä¸èƒ½æ‰§è¡Œç”Ÿäº§ä»»åŠ¡!");
+            try {
+                //å½“å‰çš„ç”Ÿäº§çº¿ç¨‹ç­‰å¾…
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        //æ»¡è¶³ç”Ÿäº§æ¡ä»¶ï¼Œåˆ™è¿›è¡Œç”Ÿäº§ï¼Œè¿™é‡Œç®€å•çš„æ›´æ”¹å½“å‰åº“å­˜é‡
+        curnum += neednum;
+        System.out.println("å·²ç»ç”Ÿäº§äº†" + neednum + "ä¸ªäº§å“ï¼Œç°ä»“å‚¨é‡ä¸º" + curnum);
+        //å”¤é†’åœ¨æ­¤å¯¹è±¡ç›‘è§†å™¨ä¸Šç­‰å¾…çš„æ‰€æœ‰çº¿ç¨‹
+        notifyAll();
+    }
 
-    /** 
-     * Ïû·ÑÖ¸¶¨ÊıÁ¿µÄ²úÆ· 
-     * 
-     * @param neednum 
-     */ 
-    public synchronized void consume(int neednum) { 
-            //²âÊÔÊÇ·ñ¿ÉÏû·Ñ 
-            while (curnum < neednum) { 
-                    try { 
-                            //µ±Ç°µÄÉú²úÏß³ÌµÈ´ı 
-                            wait(); 
-                    } catch (InterruptedException e) { 
-                            e.printStackTrace(); 
-                    } 
-            } 
-            //Âú×ãÏû·ÑÌõ¼ş£¬Ôò½øĞĞÏû·Ñ£¬ÕâÀï¼òµ¥µÄ¸ü¸Äµ±Ç°¿â´æÁ¿ 
-            curnum -= neednum; 
-            System.out.println("ÒÑ¾­Ïû·ÑÁË" + neednum + "¸ö²úÆ·£¬ÏÖ²Ö´¢Á¿Îª" + curnum); 
-            //»½ĞÑÔÚ´Ë¶ÔÏó¼àÊÓÆ÷ÉÏµÈ´ıµÄËùÓĞÏß³Ì 
-            notifyAll(); 
-    } 
-} 
+    /**
+     * æ¶ˆè´¹æŒ‡å®šæ•°é‡çš„äº§å“
+     *
+     * @param neednum
+     */
+    public synchronized void consume(int neednum) {
+        //æµ‹è¯•æ˜¯å¦å¯æ¶ˆè´¹
+        while (curnum < neednum) {
+            try {
+                //å½“å‰çš„ç”Ÿäº§çº¿ç¨‹ç­‰å¾…
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        //æ»¡è¶³æ¶ˆè´¹æ¡ä»¶ï¼Œåˆ™è¿›è¡Œæ¶ˆè´¹ï¼Œè¿™é‡Œç®€å•çš„æ›´æ”¹å½“å‰åº“å­˜é‡
+        curnum -= neednum;
+        System.out.println("å·²ç»æ¶ˆè´¹äº†" + neednum + "ä¸ªäº§å“ï¼Œç°ä»“å‚¨é‡ä¸º" + curnum);
+        //å”¤é†’åœ¨æ­¤å¯¹è±¡ç›‘è§†å™¨ä¸Šç­‰å¾…çš„æ‰€æœ‰çº¿ç¨‹
+        notifyAll();
+    }
+}
 
-/** 
-* Éú²úÕß 
-*/ 
-class Producer extends Thread { 
-    private int neednum;                //Éú²ú²úÆ·µÄÊıÁ¿ 
-    private Godown godown;            //²Ö¿â 
+/**
+ * ç”Ÿäº§è€…
+ */
+class Producer extends Thread {
+    private int neednum;                //ç”Ÿäº§äº§å“çš„æ•°é‡
+    private Godown godown;            //ä»“åº“
 
-    Producer(int neednum, Godown godown) { 
-            this.neednum = neednum; 
-            this.godown = godown; 
-    } 
+    Producer(int neednum, Godown godown) {
+        this.neednum = neednum;
+        this.godown = godown;
+    }
 
-    public void run() { 
-            //Éú²úÖ¸¶¨ÊıÁ¿µÄ²úÆ· 
-            godown.produce(neednum); 
-    } 
-} 
+    public void run() {
+        //ç”Ÿäº§æŒ‡å®šæ•°é‡çš„äº§å“
+        godown.produce(neednum);
+    }
+}
 
-/** 
-* Ïû·ÑÕß 
-*/ 
-class Consumer extends Thread { 
-    private int neednum;                //Éú²ú²úÆ·µÄÊıÁ¿ 
-    private Godown godown;            //²Ö¿â 
+/**
+ * æ¶ˆè´¹è€…
+ */
+class Consumer extends Thread {
+    private int neednum;                //ç”Ÿäº§äº§å“çš„æ•°é‡
+    private Godown godown;            //ä»“åº“
 
-    Consumer(int neednum, Godown godown) { 
-            this.neednum = neednum; 
-            this.godown = godown; 
-    } 
+    Consumer(int neednum, Godown godown) {
+        this.neednum = neednum;
+        this.godown = godown;
+    }
 
-    public void run() { 
-            //Ïû·ÑÖ¸¶¨ÊıÁ¿µÄ²úÆ· 
-            godown.consume(neednum); 
-    } 
+    public void run() {
+        //æ¶ˆè´¹æŒ‡å®šæ•°é‡çš„äº§å“
+        godown.consume(neednum);
+    }
 }
