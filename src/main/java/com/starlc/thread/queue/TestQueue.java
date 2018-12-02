@@ -8,21 +8,20 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * ≤‚ ‘∂”¡–
  * 
  * @author starlc
  * @since jdk1.7
  * @version V-0.1
- * @Date 2018ƒÍ4‘¬9»’ starlc
+ * @Date 2018 starlc
  */
 public class TestQueue {
     public static void main(String[] args) throws InterruptedException {
         BlockingQueue bqueue = new ArrayBlockingQueue(20);
         for (int i = 0; i < 30; i++) {
-            // Ω´÷∏∂®‘™ÀÿÃÌº”µΩ¥À∂”¡–÷–£¨»Áπ˚√ª”–ø…”√ø’º‰£¨Ω´“ª÷±µ»¥˝£®»Áπ˚”–±ÿ“™£©°£
+        	//Â∞ÜÊåáÂÆöÂÖÉÁ¥†Ê∑ªÂä†Âà∞Ê≠§ÈòªÂ°ûÊ†à‰∏≠ÔºåÂ¶ÇÊûúÊ≤°ÊúâÂèØÁî®Á©∫Èó¥ÔºåÂ∞Ü‰∏ÄÁõ¥Á≠âÂæÖÔºàÂ¶ÇÊûúÊúâÂøÖË¶ÅÔºâ„ÄÇ 
             bqueue.put(i);
-            System.out.println("œÚ◊Ë»˚∂”¡–÷–ÃÌº”¡À‘™Àÿ:" + i);
+            System.out.println("xxxx:" + i);
         }
-        System.out.println("≥Ã–ÚµΩ¥À‘À––Ω· ¯£¨º¥Ω´ÕÀ≥ˆ----");
+        System.out.println("xxxx----");
     }
 }
