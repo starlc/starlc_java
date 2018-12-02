@@ -1,16 +1,16 @@
 /**
  * 
  */
-package com.starlc.thread2;
+package com.starlc.thread2.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author starlc
- *ReentrantLock 的可重入
+ *ReentrantLock 
  * 
- *jps 命令
- *jstack pid 查看
+ *jps 
+ *jstack pid 
  */
 public class ReenterLock implements Runnable {
 	
@@ -28,7 +28,7 @@ public class ReenterLock implements Runnable {
 				i++;
 			}finally{
 				lock.unlock();
-				//lock.unlock();如果加锁俩次，释放2次
+				//lock.unlock();
 			}
 		}
 	}
