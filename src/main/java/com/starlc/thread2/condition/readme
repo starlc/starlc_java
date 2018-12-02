@@ -1,0 +1,5 @@
+Object.wait()
+Object.notify()
+只能在同步块中使用
+
+condition 同样也必须要先获得锁 一般配合ReentrantLock使用
