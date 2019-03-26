@@ -7,11 +7,7 @@ package com.starlc.thread.cyclicbarrier;
  * @author starlc
  *
  */
-import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.*;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 public class CyclicBarrierDemo {
 	private static final ThreadPoolExecutor threadPool = new ThreadPoolExecutor(
@@ -37,8 +33,9 @@ public class CyclicBarrierDemo {
 				Thread.sleep(1000);
 				cb.await();// 拦截线程
 				System.out.println(name + "从楼底下出发");
-				Thread.sleep(1000);
-				System.out.println(name + "到达操场");
+				long time = (long)(Math.random()*1000);
+				Thread.sleep(time);
+				System.out.println(name + "到达操场,用时"+time);
 
 			} catch (InterruptedException e) {
 				e.printStackTrace();
