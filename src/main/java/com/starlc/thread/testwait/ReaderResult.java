@@ -5,12 +5,12 @@
 package com.starlc.thread.testwait; 
 
 /**
- * »ñÈ¡¼ÆËã½á¹û²¢Êä³ö 
+ * è·å–è®¡ç®—ç»“æœå¹¶è¾“å‡º 
  * 
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ7ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ7æ—¥ starlc      
  */
 public class ReaderResult extends Thread {
     Calculator c; 
@@ -22,23 +22,23 @@ public class ReaderResult extends Thread {
     public void run() { 
             synchronized (c) { 
                     try { 
-                            System.out.println(Thread.currentThread() + "µÈ´ı¼ÆËã½á¹û¡£¡£¡£"); 
+                            System.out.println(Thread.currentThread() + "ç­‰å¾…è®¡ç®—ç»“æœã€‚ã€‚ã€‚"); 
                             c.wait(); 
                     } catch (InterruptedException e) { 
                             e.printStackTrace(); 
                     } 
-                    System.out.println(Thread.currentThread() + "¼ÆËã½á¹ûÎª£º" + c.total); 
+                    System.out.println(Thread.currentThread() + "è®¡ç®—ç»“æœä¸ºï¼š" + c.total); 
             } 
     } 
 
     public static void main(String[] args) { 
             Calculator calculator = new Calculator(); 
 
-            //Æô¶¯Èı¸öÏß³Ì£¬·Ö±ğ»ñÈ¡¼ÆËã½á¹û 
+            //å¯åŠ¨ä¸‰ä¸ªçº¿ç¨‹ï¼Œåˆ†åˆ«è·å–è®¡ç®—ç»“æœ 
             new ReaderResult(calculator).start(); 
             new ReaderResult(calculator).start(); 
             new ReaderResult(calculator).start(); 
-            //Æô¶¯¼ÆËãÏß³Ì 
+            //å¯åŠ¨è®¡ç®—çº¿ç¨‹ 
             calculator.start(); 
     } 
 }

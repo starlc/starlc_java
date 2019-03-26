@@ -5,12 +5,12 @@
 package com.starlc.thread.testwait; 
 
 /**
- * ¼ÆËã1+2+3 ... +100µÄºÍ 
+ * è®¡ç®—1+2+3 ... +100çš„å’Œ 
  * 
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ7ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ7æ—¥ starlc      
  */
 public class ThreadB extends Thread {
     int total; 
@@ -20,7 +20,7 @@ public class ThreadB extends Thread {
             for (int i = 0; i < 101; i++) { 
                 total += i; 
             } 
-            //£¨Íê³É¼ÆËãÁË£©»½ÐÑÔÚ´Ë¶ÔÏó¼àÊÓÆ÷ÉÏµÈ´ýµÄµ¥¸öÏß³Ì£¬ÔÚ±¾ÀýÖÐÏß³ÌA±»»½ÐÑ 
+            //ï¼ˆå®Œæˆè®¡ç®—äº†ï¼‰å”¤é†’åœ¨æ­¤å¯¹è±¡ç›‘è§†å™¨ä¸Šç­‰å¾…çš„å•ä¸ªçº¿ç¨‹ï¼Œåœ¨æœ¬ä¾‹ä¸­çº¿ç¨‹Aè¢«å”¤é†’ 
             notify(); 
         } 
     } 

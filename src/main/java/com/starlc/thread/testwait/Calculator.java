@@ -5,12 +5,12 @@
 package com.starlc.thread.testwait; 
 
 /**
- * ¼ÆËãÏß³Ì 
+ * è®¡ç®—çº¿ç¨‹ 
  * 
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ7ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ7æ—¥ starlc      
  */
 public class Calculator extends Thread {
     int total; 
@@ -21,7 +21,7 @@ public class Calculator extends Thread {
                             total += i; 
                     } 
             } 
-            //Í¨ÖªËùÓĞÔÚ´Ë¶ÔÏóÉÏµÈ´ıµÄÏß³Ì 
+            //é€šçŸ¥æ‰€æœ‰åœ¨æ­¤å¯¹è±¡ä¸Šç­‰å¾…çš„çº¿ç¨‹ 
             notifyAll(); 
     } 
 }

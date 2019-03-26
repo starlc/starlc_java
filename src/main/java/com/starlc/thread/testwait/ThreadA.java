@@ -5,29 +5,29 @@
 package com.starlc.thread.testwait; 
 
 /**
- * ¼ÆËãÊä³öÆäËûÏß³ÌËø¼ÆËãµÄÊı¾İ  
+ * è®¡ç®—è¾“å‡ºå…¶ä»–çº¿ç¨‹é”è®¡ç®—çš„æ•°æ®  
  * 
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê4ÔÂ7ÈÕ starlc      
+ * @Date     2018å¹´4æœˆ7æ—¥ starlc      
  */
 public class ThreadA  {
     
     public static void main(String[] args) { 
         ThreadB b = new ThreadB(); 
-        //Æô¶¯¼ÆËãÏß³Ì 
+        //å¯åŠ¨è®¡ç®—çº¿ç¨‹ 
         b.start(); 
-        //Ïß³ÌAÓµÓĞb¶ÔÏóÉÏµÄËø¡£Ïß³ÌÎªÁËµ÷ÓÃwait()»ònotify()·½·¨£¬¸ÃÏß³Ì±ØĞëÊÇÄÇ¸ö¶ÔÏóËøµÄÓµÓĞÕß 
+        //çº¿ç¨‹Aæ‹¥æœ‰bå¯¹è±¡ä¸Šçš„é”ã€‚çº¿ç¨‹ä¸ºäº†è°ƒç”¨wait()æˆ–notify()æ–¹æ³•ï¼Œè¯¥çº¿ç¨‹å¿…é¡»æ˜¯é‚£ä¸ªå¯¹è±¡é”çš„æ‹¥æœ‰è€… 
         synchronized (b) { 
             try { 
-                System.out.println("µÈ´ı¶ÔÏóbÍê³É¼ÆËã¡£¡£¡£"); 
-                //µ±Ç°Ïß³ÌAµÈ´ı 
+                System.out.println("ç­‰å¾…å¯¹è±¡bå®Œæˆè®¡ç®—ã€‚ã€‚ã€‚"); 
+                //å½“å‰çº¿ç¨‹Aç­‰å¾… 
                 b.wait(); 
             } catch (InterruptedException e) { 
                 e.printStackTrace(); 
             } 
-            System.out.println("b¶ÔÏó¼ÆËãµÄ×ÜºÍÊÇ£º" + b.total); 
+            System.out.println("bå¯¹è±¡è®¡ç®—çš„æ€»å’Œæ˜¯ï¼š" + b.total); 
         } 
     } 
 }
