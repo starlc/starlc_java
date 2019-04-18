@@ -33,6 +33,13 @@ public class Basic {
 	void foo(int value) {
 		value = 100;
 	}
+
+	/**
+	 * 这个要怎么解释
+	 * 当String作为形参传递到方法里的时候,实际上传递的是str引用的拷贝,改变的是str引用的拷贝,而后方法结束
+	 * ，形参str被销毁, 原str的引用保持不变,还是指向原常量池中的abc  这个方法输出的是abc
+	 * @param text
+	 */
 	void foo(String text) {
 		text = "windows";
 	}

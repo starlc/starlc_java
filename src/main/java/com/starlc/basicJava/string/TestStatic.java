@@ -13,5 +13,8 @@ public class TestStatic {
 		TestStatic a = new TestStatic();
 		System.out.println(a.A);
 		System.out.println(TestStatic.A);
+		TestStatic.A++;
+		System.out.println(TestStatic.A);
+		System.out.println(a.A);
 	}
 }
