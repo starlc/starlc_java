@@ -5,8 +5,6 @@ package com.starlc.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  * @author starlc
@@ -34,7 +32,7 @@ public class RequestCtrlInvocationHandle implements InvocationHandler {
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
 		// TODO Auto-generated method stub
-		if (method.getName().equals("request")) {
+		if ("request".equals(method.getName())) {
 			//Date data = new Date();
 			before();
 			Object objReObject =  method.invoke(target, args);

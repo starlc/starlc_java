@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.datastructure.btree;
 
@@ -9,7 +9,6 @@ import java.util.Queue;
 
 /**
  * @author starlc
- *
  */
 public class LinkedBinaryTree implements BinaryTree {
 
@@ -251,8 +250,9 @@ public class LinkedBinaryTree implements BinaryTree {
 		stack.push(current);
 		stack.push(current);
 		while (!stack.isEmpty()) {
-			current = stack.getFirst();stack.pop();
-			if (!stack.isEmpty()&& current ==stack.getFirst()) {
+			current = stack.getFirst();
+			stack.pop();
+			if (!stack.isEmpty() && current == stack.getFirst()) {
 				if (current.rightChild != null) {
 					stack.push(current.rightChild);
 					stack.push(current.rightChild);
@@ -261,8 +261,8 @@ public class LinkedBinaryTree implements BinaryTree {
 					stack.push(current.leftChild);
 					stack.push(current.leftChild);
 				}
-			}else {
-				System.out.print(current.value+" ");
+			} else {
+				System.out.print(current.value + " ");
 			}
 		}
 		System.out.println();

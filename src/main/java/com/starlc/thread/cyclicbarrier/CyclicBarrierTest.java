@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.starlc.thread.cyclicbarrier;
 
@@ -8,7 +8,6 @@ import java.util.concurrent.CyclicBarrier;
 
 /**
  * @author starlc
- *
  */
 public class CyclicBarrierTest {
 
@@ -47,30 +46,36 @@ class Solver {
 				}
 			}
 		}
-		
-		boolean done(){
+
+		boolean done() {
 			return true;
 		}
-		void processRow(int row){
-			
+
+		void processRow(int row) {
+
 		}
 	}
 
 	public Solver(float[][] matrix) {
-	     data = matrix;
-	     N = matrix.length;
-	     barrier = new CyclicBarrier(N, 
-	                                 new Runnable() {
-	                                   public void run() { 
-	                                     mergeRows(); 
-	                                   }
-	                                 });
-	     for (int i = 0; i < N; ++i) 
-	       new Thread(new Worker(i)).start();
+		data = matrix;
+		N = matrix.length;
+		barrier = new CyclicBarrier(N,
+				new Runnable() {
+					@Override
+					public void run() {
+						mergeRows();
+					}
+				});
+		for (int i = 0; i < N; ++i){
+			new Thread(new Worker(i)).start();
+		}
 
-	     waitUntilDone();
-	   }
-	
-	void waitUntilDone(){}
-	void mergeRows(){}
+		waitUntilDone();
+	}
+
+	void waitUntilDone() {
+	}
+
+	void mergeRows() {
+	}
 }

@@ -1,38 +1,36 @@
 /**
- * 
+ *
  */
 package com.starlc.datastructure.btree;
 
 /**
  * 二叉树接口 可以有不同的实现类，每个类可以使用不同的存储结构，比如顺序结构、链式结构
- * 
- * @author starlc
  *
+ * @author starlc
  */
 public interface BinaryTree {
 	/**
 	 * 判断是否为空
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isEmpty();
 
 	/**
-	 * 
 	 * @return
 	 */
 	public int size();
 
 	/**
 	 * 获取树的高度
-	 * 
+	 *
 	 * @return
 	 */
 	public int getHeight();
 
 	/**
 	 * 查找指定值的节点
-	 * 
+	 *
 	 * @param value
 	 * @return
 	 */
@@ -55,7 +53,7 @@ public interface BinaryTree {
 
 	/**
 	 * 后序遍历递归操作
-	 * 
+	 *
 	 * @param node
 	 */
 	public void postOrderTraverse(Node node);

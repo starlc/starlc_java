@@ -1,12 +1,12 @@
 /**
- * 
+ *
  */
 package com.starlc.thread.cyclicbarrier;
 
 /**
  * @author starlc
- *
  */
+
 import java.util.concurrent.*;
 
 public class CyclicBarrierDemo {
@@ -15,6 +15,7 @@ public class CyclicBarrierDemo {
 	// 当拦截线程数达到4时，便优先执行barrierAction，然后再执行被拦截的线程。
 	private static final CyclicBarrier cb = new CyclicBarrier(4,
 			new Runnable() {
+				@Override
 				public void run() {
 					System.out.println("寝室四兄弟一起出发去球场");
 				}
@@ -27,15 +28,16 @@ public class CyclicBarrierDemo {
 			this.name = name;
 		}
 
+		@Override
 		public void run() {
 			System.out.println(name + "开始从宿舍出发");
 			try {
 				Thread.sleep(1000);
 				cb.await();// 拦截线程
 				System.out.println(name + "从楼底下出发");
-				long time = (long)(Math.random()*1000);
+				long time = (long) (Math.random() * 1000);
 				Thread.sleep(time);
-				System.out.println(name + "到达操场,用时"+time);
+				System.out.println(name + "到达操场,用时" + time);
 
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -47,7 +49,7 @@ public class CyclicBarrierDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] str = { "李明", "王强", "刘凯", "赵杰" };
+		String[] str = {"李明", "王强", "刘凯", "赵杰"};
 		for (int i = 0; i < 4; i++) {
 			threadPool.execute(new GoThread(str[i]));
 		}

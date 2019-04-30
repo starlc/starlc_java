@@ -4,6 +4,8 @@
 
 package com.starlc.designmode.builder3;
 
+import com.starlc.designmode.builder.AbstractPersonBuilder;
+
 /**
  * 具体创建者
  *
@@ -16,7 +18,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
 
     private Person person = new Person();
     /** (non-Javadoc)
-     * @see com.starlc.designmode.builder.PersonBuilder#buildName()
+     * @see AbstractPersonBuilder#buildName()
      */
     @Override
     public void buildName() {
@@ -26,7 +28,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
     }
 
     /** (non-Javadoc)
-     * @see com.starlc.designmode.builder.PersonBuilder#buildPhone()
+     * @see AbstractPersonBuilder#buildPhone()
      */
     @Override
     public void buildPhone() {
@@ -35,7 +37,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
     }
 
     /** (non-Javadoc)
-     * @see com.starlc.designmode.builder.PersonBuilder#buildAge()
+     * @see AbstractPersonBuilder#buildAge()
      */
     @Override
     public void buildAge() {
@@ -45,7 +47,7 @@ public class ConcreatePersonBuilder extends PersonBuilder {
     }
 
     /** (non-Javadoc)
-     * @see com.starlc.designmode.builder.PersonBuilder#buildAddress()
+     * @see AbstractPersonBuilder#buildAddress()
      */
     @Override
     public void buildAddress() {

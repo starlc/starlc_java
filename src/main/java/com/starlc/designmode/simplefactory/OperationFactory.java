@@ -29,6 +29,7 @@ public class OperationFactory {
 			case "/":
 				operation = new OperationDevide();
 				break;
+			default://donothing
 		}
 		return operation;
 	}

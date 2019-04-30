@@ -15,7 +15,7 @@ public class TestPerson {
 	public void test() {
 		AbstractPerson.eat();
 		
-		AbstractPerson person = new ConcreatePerson("ÕÅÈı");
+		AbstractPerson person = new ConcreatePerson("å¼ ä¸‰");
 		person.show();
 	}
 }

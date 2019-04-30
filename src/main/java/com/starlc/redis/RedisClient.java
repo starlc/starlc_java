@@ -1,104 +1,99 @@
 package com.starlc.redis;
 
+import redis.clients.jedis.*;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.jedis.JedisShardInfo;
-import redis.clients.jedis.ShardedJedis;
-import redis.clients.jedis.ShardedJedisPool;
 
 
 
 public class RedisClient {
 
-    private Jedis jedis;//·ÇÇĞÆ¬¶î¿Í»§¶ËÁ¬½Ó
-    private JedisPool jedisPool;//·ÇÇĞÆ¬Á¬½Ó³Ø
-    private ShardedJedis shardedJedis;//ÇĞÆ¬¶î¿Í»§¶ËÁ¬½Ó
-    private ShardedJedisPool shardedJedisPool;//ÇĞÆ¬Á¬½Ó³Ø
-    
-    public RedisClient() 
-    { 
-        initialPool(); 
-        initialShardedPool(); 
-        shardedJedis = shardedJedisPool.getResource(); 
-        jedis = jedisPool.getResource(); 
-        
-        
-    } 
- 
+    private Jedis jedis;//éåˆ‡ç‰‡é¢å®¢æˆ·ç«¯è¿æ¥
+    private JedisPool jedisPool;//éåˆ‡ç‰‡è¿æ¥æ± 
+    private ShardedJedis shardedJedis;//åˆ‡ç‰‡é¢å®¢æˆ·ç«¯è¿æ¥
+    private ShardedJedisPool shardedJedisPool;//åˆ‡ç‰‡è¿æ¥æ± 
+
+    public RedisClient()
+    {
+        initialPool();
+        initialShardedPool();
+        shardedJedis = shardedJedisPool.getResource();
+        jedis = jedisPool.getResource();
+
+
+    }
+
     /**
-     * ³õÊ¼»¯·ÇÇĞÆ¬³Ø
+     * åˆå§‹åŒ–éåˆ‡ç‰‡æ± 
      */
-    private void initialPool() 
-    { 
-        // ³Ø»ù±¾ÅäÖÃ 
-        JedisPoolConfig config = new JedisPoolConfig(); 
-        config.setMaxIdle(20); 
-        config.setMaxIdle(5); 
-        config.setMaxWaitMillis(1000l); 
-        config.setTestOnBorrow(false); 
-        
+    private void initialPool()
+    {
+        // æ± åŸºæœ¬é…ç½®
+        JedisPoolConfig config = new JedisPoolConfig();
+        config.setMaxIdle(20);
+        config.setMaxIdle(5);
+        config.setMaxWaitMillis(1000l);
+        config.setTestOnBorrow(false);
+
         jedisPool = new JedisPool(config,"192.168.0.110",6379);
     }
-    
-    /** 
-     * ³õÊ¼»¯ÇĞÆ¬³Ø 
-     */ 
-    private void initialShardedPool() 
-    { 
-        // ³Ø»ù±¾ÅäÖÃ 
-        JedisPoolConfig config = new JedisPoolConfig(); 
-        config.setMaxIdle(20); 
-        config.setMaxIdle(5); 
-        config.setMaxWaitMillis(1000l); 
-        config.setTestOnBorrow(false); 
-        // slaveÁ´½Ó 
-        List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>(); 
-        shards.add(new JedisShardInfo("192.168.0.110", 6379, "master")); 
 
-        // ¹¹Ôì³Ø 
-        shardedJedisPool = new ShardedJedisPool(config, shards); 
-    } 
+    /**
+     * åˆå§‹åŒ–åˆ‡ç‰‡æ± 
+     */
+    private void initialShardedPool()
+    {
+        // æ± åŸºæœ¬é…ç½®
+        JedisPoolConfig config = new JedisPoolConfig();
+        config.setMaxIdle(20);
+        config.setMaxIdle(5);
+        config.setMaxWaitMillis(1000l);
+        config.setTestOnBorrow(false);
+        // slaveé“¾æ¥
+        List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>();
+        shards.add(new JedisShardInfo("192.168.0.110", 6379, "master"));
 
-    public void show() {     
-        KeyOperate(); 
-        StringOperate(); 
-        ListOperate(); 
-        SetOperate();
-        SortedSetOperate();
-        HashOperate(); 
-        jedisPool.returnResource(jedis);
-        jedis.set("shenlinnan", "hahahahahaha");  
-        System.out.println(jedis.get("shenlinnan")); 
-        shardedJedisPool.returnResource(shardedJedis);
-    } 
-    public static void main(String[] args) {
-        new RedisClient().show(); 
+        // æ„é€ æ± 
+        shardedJedisPool = new ShardedJedisPool(config, shards);
     }
-      private void KeyOperate() {
-         //
-      }
 
-      private void StringOperate() {
-         //
-      }
+    public void show() {
+        keyOperate();
+        stringOperate();
+        listOperate();
+        setOperate();
+        sortedSetOperate();
+        hashOperate();
+        jedisPool.returnResource(jedis);
+        jedis.set("shenlinnan", "hahahahahaha");
+        System.out.println(jedis.get("shenlinnan"));
+        shardedJedisPool.returnResource(shardedJedis);
+    }
+    public static void main(String[] args) {
+        new RedisClient().show();
+    }
+    private void keyOperate() {
+        //
+    }
 
-      private void ListOperate() {
-         //
-      }
+    private void stringOperate() {
+        //
+    }
 
-      private void SetOperate() {
-         //
-      }
+    private void listOperate() {
+        //
+    }
 
-      private void SortedSetOperate() {
-         //
-      }
-    
-      private void HashOperate() {
-         //
-      }
+    private void setOperate() {
+        //
+    }
+
+    private void sortedSetOperate() {
+        //
+    }
+
+    private void hashOperate() {
+        //
+    }
 }

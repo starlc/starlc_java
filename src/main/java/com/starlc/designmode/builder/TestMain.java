@@ -15,7 +15,7 @@ package com.starlc.designmode.builder;
  */
 public class TestMain {
     public static void main(String[] args) {
-        PersonBuilder pb = new ConcreatePersonBuilder();
+        AbstractPersonBuilder pb = new ConcretePersonBuilder();
         PersonDirector pd = new PersonDirector(pb);
         pd.createPerson();
     }

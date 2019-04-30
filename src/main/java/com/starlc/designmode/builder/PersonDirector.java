@@ -14,8 +14,8 @@ package com.starlc.designmode.builder;
  */
 public class PersonDirector {
 
-    private PersonBuilder pb;
-    public  PersonDirector(PersonBuilder pb) {
+    private AbstractPersonBuilder pb;
+    public  PersonDirector(AbstractPersonBuilder pb) {
         this.pb = pb;
     }
 
