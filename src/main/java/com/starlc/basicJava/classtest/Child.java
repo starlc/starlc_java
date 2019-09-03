@@ -6,7 +6,7 @@ package com.starlc.basicJava.classtest;
 /**
  * @author starlc
  */
-public class Child extends Super {
+public class  Child extends Super {
 
 	public Child() {
 		super();
