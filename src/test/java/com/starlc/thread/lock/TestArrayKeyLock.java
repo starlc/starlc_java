@@ -19,7 +19,7 @@ public class TestArrayKeyLock {
     public static void main(String[] args) {
         int count = 1000;
         final CountDownLatch latch = new CountDownLatch(count);
-        final ArrayKeyLock lock = new ArrayKeyLock(32);
+        final SegmentKeyLock lock = new SegmentKeyLock(32);
         final String[] arr = new String[]{"a1","a2","a3","a4","a5","a6","a7","a8","a9","a0"};
         for (int i = 0; i <count ; i++) {
             new Thread(new Runnable() {
