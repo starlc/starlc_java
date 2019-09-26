@@ -1,13 +1,6 @@
 package com.starlc.thread.lock;
 
-import com.starlc.util.Console;
-
-import java.util.Random;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReferenceArray;
-
-import sun.misc.Unsafe;
 
 /**
 * @Description:    分段锁 多个线程同时访问R1,R2 对于同一个资源的使用后来的线程必须等待前面的线程释放之后才能使用
