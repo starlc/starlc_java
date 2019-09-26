@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 * @UpdateRemark:   修改内容
 * @Version:        1.0
 */
-public class ArrayKeyLock implements KeyLock{
+public class SegmentKeyLock implements KeyLock{
     private AtomicReferenceArray<Boolean> assist ;
     private static int DEFAULT_CAPACITY;
 
@@ -19,7 +19,7 @@ public class ArrayKeyLock implements KeyLock{
 
     private int shift ;
 
-    public ArrayKeyLock() {
+    public SegmentKeyLock() {
         this.shift = DEFAULT_CAPACITY;
         assist = new AtomicReferenceArray<>(shift);
         for (int i = 0; i <shift ; i++) {
@@ -27,7 +27,7 @@ public class ArrayKeyLock implements KeyLock{
         }
     }
 
-    public ArrayKeyLock(int shift) {
+    public SegmentKeyLock(int shift) {
         this.shift = shift;
         assist = new AtomicReferenceArray<>(shift);
         for (int i = 0; i <shift ; i++) {
