@@ -3,8 +3,10 @@ package com.starlc.thread.lock;
 import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -53,6 +55,7 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
                 synchronized (this) {
                     if (!isLockAll && this.assist.isEmpty()) {
                         isLockAll = true;
+                        break;
                     }
                 }
             } else {
@@ -104,7 +107,9 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
             }
             uniqueKeys.add(key);
         }
-        return uniqueKeys.toArray(new String[]{});
+        //去重
+        Set<String> keySet = new HashSet(uniqueKeys);
+        return keySet.toArray(new String[]{});
     }
 
 }
