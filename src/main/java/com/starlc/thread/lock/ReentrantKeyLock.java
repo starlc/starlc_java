@@ -30,7 +30,7 @@ public class ReentrantKeyLock implements KeyLock {
                     break;
                 }else if(compareAndSet(key,t)){
                     //重复进入
-                    Console.log("{0}又进来了,key为{1}",t.getName(),key);
+                    Console.log("{0},又进来了,key为{1}",t.getName(),key);
                     break;
                 } else {
                     Thread.sleep(1);
@@ -83,7 +83,7 @@ public class ReentrantKeyLock implements KeyLock {
         }
 
         public Helper( Thread lockThread) {
-            this.count = 0;
+            this.count = 1;
             this.lockThread = lockThread;
         }
 
