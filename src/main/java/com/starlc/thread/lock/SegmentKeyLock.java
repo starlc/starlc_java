@@ -1,22 +1,15 @@
 package com.starlc.thread.lock;
 
-import com.starlc.util.Console;
-
-import java.util.Random;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
-import sun.misc.Unsafe;
-
 /**
-* @Description:    分段锁 错误案例  没有找到真正的CAS
+* @Description:    分段锁 多个线程同时访问R1,R2 对于同一个资源的使用后来的线程必须等待前面的线程释放之后才能使用
 * @Author:         liuc
 * @CreateDate:     2019/9/10 23:03
 * @UpdateRemark:   修改内容
 * @Version:        1.0
 */
-public class ArrayKeyLock implements KeyLock{
+public class SegmentKeyLock implements KeyLock{
     private AtomicReferenceArray<Boolean> assist ;
     private static int DEFAULT_CAPACITY;
 
@@ -26,7 +19,7 @@ public class ArrayKeyLock implements KeyLock{
 
     private int shift ;
 
-    public ArrayKeyLock() {
+    public SegmentKeyLock() {
         this.shift = DEFAULT_CAPACITY;
         assist = new AtomicReferenceArray<>(shift);
         for (int i = 0; i <shift ; i++) {
@@ -34,7 +27,7 @@ public class ArrayKeyLock implements KeyLock{
         }
     }
 
-    public ArrayKeyLock(int shift) {
+    public SegmentKeyLock(int shift) {
         this.shift = shift;
         assist = new AtomicReferenceArray<>(shift);
         for (int i = 0; i <shift ; i++) {
@@ -82,32 +75,4 @@ public class ArrayKeyLock implements KeyLock{
     }
 
 
-    public static void main(String[] args) {
-        int count = 1000;
-        final CountDownLatch latch = new CountDownLatch(count);
-        final ArrayKeyLock lock = new ArrayKeyLock(32);
-        final String[] arr = new String[]{"a1","a2","a3","a4","a5","a6","a7","a8","a9","a0"};
-        for (int i = 0; i <count ; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    int a=0;
-                    try {
-                        latch.await();
-                        a = (int)(Math.random()*(10-1+1));
-                        //System.out.println("a:"+a);
-                        lock.lock(arr[a]);
-                        Console.log("开始执行:{0},key为{1},hash为{2}",Thread.currentThread().getName(),arr[a],31&hash(arr[a]));
-                        Thread.sleep(20);
-                        Console.log("结束执行:{0},key为{1},hash为{2}",Thread.currentThread().getName(),arr[a],31&hash(arr[a]));
-                    }catch (Exception e){
-                        throw new Error(e);
-                    }finally {
-                        lock.unLock(arr[a]);
-                    }
-                }
-            },"count"+i).start();
-            latch.countDown();
-        }
-    }
 }
