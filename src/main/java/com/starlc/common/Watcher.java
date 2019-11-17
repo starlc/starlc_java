@@ -21,7 +21,11 @@ public final class Watcher {
 
     public long end(){
         long cost = System.currentTimeMillis()-startTime;
-        System.out.println(MessageFormat.format(this.message,cost));
+        if (message != null && !"".equals(message))
+            System.out.println(MessageFormat.format(this.message, cost));
+        else {
+            System.out.println("this code execute cost time:"+cost + "ms ");
+        }
         return cost;
     }
 
