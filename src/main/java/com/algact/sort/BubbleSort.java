@@ -55,4 +55,9 @@ public class BubbleSort implements Sort{
             if (!flag)break;
         }
     }
+
+    @Override
+    public void sort() {
+
+    }
 }

@@ -28,7 +28,7 @@ public class JDKDynamicProxy<T> implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Watcher watcher = Watcher.get("本次排序共花费时间 {0} ms");
+        Watcher watcher = Watcher.get();
         Object object = method.invoke(target,args);
         watcher.end();
         return object;

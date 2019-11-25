@@ -30,7 +30,7 @@ public class SelectionSort implements Sort {
                     minIndex = j;
                 }
             }
-            Console.log("本次循环找到的最小值{0},其下标为{1}",min,minIndex);
+            //Console.log("本次循环找到的最小值{0},其下标为{1}",min,minIndex);
             arr[minIndex] = arr[i];
             arr[i] = min;
 

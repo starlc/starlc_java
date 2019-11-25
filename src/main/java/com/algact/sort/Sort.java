@@ -14,4 +14,6 @@ public interface Sort {
      * @param n
      */
     void mySort(int[] arr,int n);
+
+    default void sort(){};
 }
