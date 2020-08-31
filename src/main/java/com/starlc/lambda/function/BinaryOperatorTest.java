@@ -2,7 +2,7 @@ package com.starlc.lambda.function;
 
 import java.util.function.BinaryOperator;
 /**
-* @Description:    java类作用描述
+* @Description:    BinaryOperator 接收两个参数T，返回更新后的T类型参数。
 * @Author:         liuc
 * @CreateDate:     2020/8/27 10:05
 * @UpdateRemark:   修改内容
