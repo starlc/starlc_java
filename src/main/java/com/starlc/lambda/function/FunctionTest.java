@@ -13,5 +13,9 @@ public class FunctionTest {
     public static void main(String[] args) {
         Function<String,String> fun = (String name)-> "this function return "+name;
         fun.apply("monkey");
+
+        //省略参数类型
+        Function<String,String> fun2 = name-> "this function return "+name;
+        fun2.apply("monkey");
     }
 }
