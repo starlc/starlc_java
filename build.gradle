@@ -16,6 +16,9 @@ apply plugin: 'application'
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     jcenter()
 }
 
@@ -24,6 +27,9 @@ dependencies {
     //23依赖jdk1.8
     implementation  'com.google.guava:guava:19.0'
     implementation  group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    implementation  group: 'com.github.stuxuhai', name: 'jpinyin', version: '1.1.8'
+    //compile 'com.github.stuxuhai:jpinyin:1.1.8'
+
 
     // Use JUnit test framework
     testCompileOnly  'junit:junit:4.12'
