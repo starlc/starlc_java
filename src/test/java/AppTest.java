@@ -7,6 +7,11 @@ import org.junit.Test;
 
 import com.starlc.common.App;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * xx
  *
@@ -23,5 +28,17 @@ public class AppTest {
     public void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+        String dt = "201906";
+        DateFormat df = new SimpleDateFormat("yyyyMM");
+        try {
+            Date date = df.parse(dt);
+            System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(date));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 }
