@@ -1,9 +1,12 @@
 package com.starlc.lambda.stream;
 
+import com.google.common.collect.Lists;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -30,12 +33,20 @@ public class StreamPeek {
     public static void peek() {
         Stream<String> stream = Stream.of("hello", "felord.cn");
         stream.peek(a->a=a+"1").forEach(System.out::println);
+        //等价于stream.peek(a->a=a+"1").forEach(a-> System.out.println(a));
         Stream<User> userStream = Stream.of(new User("1","张三"),new User("2","李四"));
         userStream.peek(user -> user.setName(user.name+" hello")).forEach(System.out::println);
 
         List<String> keys = Arrays.asList("hello", "felord.cn");
         keys.stream().peek(System.out::println);//这种方式有问题 只是中间操作
 
+
+        List<Integer> lstNum = Lists.newArrayList();
+        for (int i = 0; i < 1000; i++) {
+            lstNum.add(i);
+        }
+        String str = lstNum.stream().map(x -> x + "").collect(Collectors.joining("-"));
+        System.out.println(str);
         System.out.println("peek end");
     }
 

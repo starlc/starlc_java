@@ -4,17 +4,20 @@ import com.github.stuxuhai.jpinyin.ChineseHelper;
 import com.github.stuxuhai.jpinyin.PinyinException;
 import com.github.stuxuhai.jpinyin.PinyinFormat;
 import com.github.stuxuhai.jpinyin.PinyinHelper;
+import com.starlc.common.Watcher;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class JPinYinTest {
     public static void main(String[] args) throws PinyinException {
-        String str = "zhangsan";
-        String out = PinyinHelper.convertToPinyinString(str,",", PinyinFormat.WITHOUT_TONE);
+        String str = "重载不是责任";
+        Watcher watcher = Watcher.get();
+        String out = PinyinHelper.convertToPinyinString(str,"", PinyinFormat.WITHOUT_TONE);
+        watcher.end();
         System.out.println(out);
         String str2 = "张三";
-        String out2 = PinyinHelper.convertToPinyinString(str,",", PinyinFormat.WITHOUT_TONE);
+        String out2 = PinyinHelper.convertToPinyinString(str2,",", PinyinFormat.WITHOUT_TONE);
         System.out.println(out2);
         char a = "a".charAt(0);
         char b = "1".charAt(0);
