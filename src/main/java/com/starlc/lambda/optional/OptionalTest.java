@@ -6,6 +6,10 @@ public class OptionalTest {
 
     public static void main(String[] args) {
         test(Optional.of("id"));
+
+        ofNullable("aaa");
+        ofNullable("");
+        ofNullable(null);
     }
 
     public static void test(Optional<String> id) {
@@ -23,4 +27,11 @@ public class OptionalTest {
         String[] s = strOptional.map(w -> w.split(" ")).get();
         //strOptional.flatMap(w->w.split(" ")).get();
     }
+
+    public static void ofNullable(String param){
+        String name = Optional.ofNullable(param).orElse("zhangsan");
+        System.out.println("name:"+name);
+    }
+
+
 }
