@@ -8,21 +8,21 @@ import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
- * ²âÊÔ×èÈûÕ»
- * 
+ * æµ‹è¯•é˜»å¡æ ˆ
+ *
  * @author starlc
  * @since jdk1.7
  * @version V-0.1
- * @Date 2018Äê4ÔÂ9ÈÕ starlc
+ * @Date 2018å¹´4æœˆ9æ—¥ starlc
  */
 public class TestDeque {
     public static void main(String[] args) throws InterruptedException {
         BlockingDeque bDeque = new LinkedBlockingDeque(20);
         for (int i = 0; i < 30; i++) {
-            // ½«Ö¸¶¨ÔªËØÌí¼Óµ½´Ë×èÈûÕ»ÖĞ£¬Èç¹ûÃ»ÓĞ¿ÉÓÃ¿Õ¼ä£¬½«Ò»Ö±µÈ´ı£¨Èç¹ûÓĞ±ØÒª£©¡£
+            // å°†æŒ‡å®šå…ƒç´ æ·»åŠ åˆ°æ­¤é˜»å¡æ ˆä¸­ï¼Œå¦‚æœæ²¡æœ‰å¯ç”¨ç©ºé—´ï¼Œå°†ä¸€ç›´ç­‰å¾…ï¼ˆå¦‚æœæœ‰å¿…è¦ï¼‰ã€‚
             bDeque.putFirst(i);
-            System.out.println("Ïò×èÈûÕ»ÖĞÌí¼ÓÁËÔªËØ:" + i);
+            System.out.println("å‘é˜»å¡æ ˆä¸­æ·»åŠ äº†å…ƒç´ :" + i);
         }
-        System.out.println("³ÌĞòµ½´ËÔËĞĞ½áÊø£¬¼´½«ÍË³ö----");
+        System.out.println("ç¨‹åºåˆ°æ­¤è¿è¡Œç»“æŸï¼Œå³å°†é€€å‡º----");
     }
 }

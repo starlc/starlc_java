@@ -1,6 +1,5 @@
 package com.starlc.thread.lock;
 
-import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -26,7 +25,7 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
     }
 
     @Override
-    public void lock(@NotNull String[] keys) {
+    public void lock( String[] keys) {
         //1、需要对key去重，去除key为null 和 ""的数据
         String[] uniqueKeys = RemoveDuplicateAndNull(keys);
         //2、先锁全表，再把值都加进去
@@ -41,7 +40,7 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
     }
 
     @Override
-    public void unLock(@NotNull String[] keys) {
+    public void unLock( String[] keys) {
         String[] uniqueKeys = RemoveDuplicateAndNull(keys);
         for (String key : uniqueKeys) {
             unLock(key);
@@ -77,7 +76,7 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
     }
 
     @Override
-    public void lock(@NotNull String key) {
+    public void lock( String key) {
         while (true) {
             try {
                 if (!isLockAll && Objects.isNull(assist.putIfAbsent(key, Boolean.TRUE))) {
@@ -92,7 +91,7 @@ public class MapBatchKeyLock implements KeyLock, BatchKeyLock {
     }
 
     @Override
-    public void unLock(@NotNull String key) {
+    public void unLock( String key) {
         assist.remove(key, Boolean.TRUE);
     }
 

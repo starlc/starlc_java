@@ -1,7 +1,5 @@
 package com.algact.linkedlist;
 
-import sun.awt.SunHints;
-
 /**
 * @Description:    单向链表
  *  1）单链表的插入、删除、查找操作；

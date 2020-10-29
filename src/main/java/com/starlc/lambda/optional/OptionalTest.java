@@ -8,7 +8,7 @@ public class OptionalTest {
         test(Optional.of("id"));
 
         ofNullable("aaa");
-        ofNullable("");
+        ofNullable("中文");
         ofNullable(null);
     }
 

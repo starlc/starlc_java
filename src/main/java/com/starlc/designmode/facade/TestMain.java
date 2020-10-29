@@ -4,8 +4,6 @@
 
 package com.starlc.designmode.facade;
 
-import com.sun.org.apache.xpath.internal.FoundIndex;
-
 /**
  * 类注释信息
  * @Description:   TODO(用一句话描述该文件做什么)

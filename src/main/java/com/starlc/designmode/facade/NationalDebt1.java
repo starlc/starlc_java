@@ -1,34 +1,34 @@
 /******************************************************************************
-* Copyright (C) 2017 Starlc
-*****************************************************************************/
- 
-package com.starlc.designmode.facade; 
+ * Copyright (C) 2017 Starlc
+ *****************************************************************************/
+
+package com.starlc.designmode.facade;
 
 /**
- * ¹úÕ®1
- * 
+ * å›½å€º1
+ *
  * @author   starlc
  * @since	 jdk1.7
  * @version  V-0.1
- * @Date     2018Äê1ÔÂ27ÈÕ starlc      
+ * @Date     2018å¹´1æœˆ27æ—¥ starlc
  */
 public class NationalDebt1 {
     public void sell(){
-        System.out.println("¹úÕ®1Âô³ö");
+        System.out.println("å›½å€º1å–å‡º");
     }
-    
+
     public void buy(){
-        System.out.println("¹úÕ®1ÂòÈë");
+        System.out.println("å›½å€º1ä¹°å…¥");
     }
 }
 
 class NationalDebt2 {
     public void sell(){
-        System.out.println("¹úÕ®2Âô³ö");
+        System.out.println("å›½å€º2å–å‡º");
     }
-    
+
     public void buy(){
-        System.out.println("¹úÕ®2ÂòÈë");
+        System.out.println("å›½å€º2ä¹°å…¥");
     }
 }
  
